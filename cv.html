@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enock Maeba - CV</title>
+    <style>
+        @page {
+            margin: 0.5in;
+            size: A4;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.4;
+            color: #333;
+            font-size: 11pt;
+        }
+        
+        .container {
+            max-width: 8.5in;
+            margin: 0 auto;
+            background: white;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #0066cc;
+        }
+        
+        .name {
+            font-size: 28pt;
+            font-weight: bold;
+            color: #0066cc;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+        
+        .title {
+            font-size: 14pt;
+            color: #666;
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            font-size: 10pt;
+            color: #555;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        
+        .section {
+            margin-bottom: 18px;
+        }
+        
+        .section-title {
+            font-size: 14pt;
+            font-weight: bold;
+            color: #0066cc;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 10px;
+            padding-bottom: 3px;
+            border-bottom: 1px solid #0066cc;
+        }
+        
+        .summary {
+            text-align: justify;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .skill-category {
+            margin-bottom: 8px;
+        }
+        
+        .skill-category strong {
+            color: #0066cc;
+            font-size: 10pt;
+        }
+        
+        .skill-list {
+            font-size: 10pt;
+            color: #555;
+            line-height: 1.3;
+        }
+        
+        .experience-item {
+            margin-bottom: 15px;
+            page-break-inside: avoid;
+        }
+        
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 5px;
+        }
+        
+        .job-title {
+            font-weight: bold;
+            font-size: 12pt;
+            color: #0066cc;
+        }
+        
+        .company {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 2px;
+        }
+        
+        .location-date {
+            text-align: right;
+            color: #666;
+            font-size: 10pt;
+        }
+        
+        .job-description {
+            margin-top: 8px;
+        }
+        
+        .job-description ul {
+            margin-left: 15px;
+            margin-top: 5px;
+        }
+        
+        .job-description li {
+            margin-bottom: 3px;
+            font-size: 10pt;
+            line-height: 1.3;
+        }
+        
+        .achievements {
+            margin-top: 8px;
+        }
+        
+        .achievements-title {
+            font-weight: bold;
+            color: #0066cc;
+            margin-bottom: 4px;
+        }
+        
+        .achievements ul {
+            margin-left: 15px;
+        }
+        
+        .achievements li {
+            margin-bottom: 3px;
+            font-size: 10pt;
+        }
+        
+        .education-item {
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .education-title {
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .education-institution {
+            color: #666;
+            font-size: 10pt;
+        }
+        
+        .references-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        
+        .reference-item {
+            font-size: 10pt;
+            line-height: 1.3;
+        }
+        
+        .reference-name {
+            font-weight: bold;
+            color: #0066cc;
+            margin-bottom: 2px;
+        }
+        
+        .reference-title {
+            font-style: italic;
+            color: #666;
+            margin-bottom: 2px;
+        }
+        
+        .print-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #0066cc;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 12pt;
+            z-index: 1000;
+        }
+        
+        .print-button:hover {
+            background: #0052a3;
+        }
+        
+        @media print {
+            .print-button {
+                display: none;
+            }
+            
+            body {
+                font-size: 10pt;
+            }
+            
+            .section {
+                margin-bottom: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="print-button" onclick="window.print()">Print/Save as PDF</button>
+    
+    <div class="container">
+        <div class="header">
+            <div class="name">ENOCK MAEBA</div>
+            <div class="title">Full-Stack Web Developer | Integration Developer | AI & Cybersecurity Solutions</div>
+            <div class="contact-info">
+                <div class="contact-item">📍 Nairobi, Kenya</div>
+                <div class="contact-item">📞 +254 743 332 560</div>
+                <div class="contact-item">📧 maebaenock95@gmail.com</div>
+                <div class="contact-item">🔗 LinkedIn | GitHub</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Professional Summary</div>
+            <div class="summary">
+                Experienced full-stack web developer with a robust skill set spanning Python, PHP, JavaScript, and their frameworks. Skilled in API integrations, database management, and secure web deployments on both on-premise and cloud servers. Over the past two years, delivered 10+ portals for clients across multiple sectors, including iNGOs, and executed 8+ complex integrations. Freelance experience includes MSF EA Employee Self Service Portal (Next.js + Shadcn), a Cybersecurity Risk Assessment Portal (Next.js), and an AI Receipt Extractor for ESS. Currently expanding expertise in Flutter and FastAPI for cross-platform and microservices applications.
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Technical Skills</div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <strong>Languages & Frameworks:</strong><br>
+                    <span class="skill-list">Python, JavaScript, PHP, Next.js, React, Django REST Framework, Laravel, Shadcn UI, Bootstrap, Angular, jQuery</span>
+                </div>
+                <div class="skill-category">
+                    <strong>Databases:</strong><br>
+                    <span class="skill-list">PostgreSQL, MySQL</span>
+                </div>
+                <div class="skill-category">
+                    <strong>Integrations:</strong><br>
+                    <span class="skill-list">Microsoft Dynamics 365 BC, MPESA, E-Citizen, Pesaflow, Azure AD, Bank APIs</span>
+                </div>
+                <div class="skill-category">
+                    <strong>Web Services:</strong><br>
+                    <span class="skill-list">REST, SOAP, JSON, API consumption & development</span>
+                </div>
+                <div class="skill-category">
+                    <strong>Hosting & DevOps:</strong><br>
+                    <span class="skill-list">Windows Server, Linux/Unix, Docker, Git, Nginx, Apache</span>
+                </div>
+                <div class="skill-category">
+                    <strong>Specializations:</strong><br>
+                    <span class="skill-list">AI-based data extraction, Cybersecurity portals, Secure multi-tenant web apps</span>
+                </div>
+            </div>
+            <div style="margin-top: 10px;">
+                <strong style="color: #0066cc;">Currently Learning:</strong> Flutter, FastAPI
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Professional Experience</div>
+            
+            <div class="experience-item">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Full-Stack Web Developer</div>
+                        <div class="company">Kobby Technologies Ltd</div>
+                    </div>
+                    <div class="location-date">
+                        Nairobi, Kenya<br>
+                        Nov 2021 – Present
+                    </div>
+                </div>
+                <div class="job-description">
+                    <ul>
+                        <li>Manage complete web portal development process from concept to deployment</li>
+                        <li>Convert mock-ups into functional, responsive web applications using HTML, JavaScript, Python, and AJAX</li>
+                        <li>Build and maintain PostgreSQL databases and implement RESTful/SOAP APIs for system integrations</li>
+                        <li>Integrated third-party APIs including MPESA, bank systems, and Microsoft Dynamics 365 BC</li>
+                        <li>Conduct security updates, performance monitoring, and bug fixes for active portals</li>
+                    </ul>
+                </div>
+                <div class="achievements">
+                    <div class="achievements-title">Key Achievements:</div>
+                    <ul>
+                        <li>Lake Basin Development Authority: E-Procurement and Employee Self Service Portal</li>
+                        <li>Veterinary Medicines Directorate: Client Portal for information sharing</li>
+                        <li>Federation of Kenya Employers: Member Portal (Laravel)</li>
+                        <li>Kenya Plant Health Inspectorate Service: Employee Self Service, E-Recruitment, Room Booking portals</li>
+                        <li>Ed Partners Africa: Client Portal for service optimization</li>
+                        <li>Hosted and maintained dynamic websites for multiple organizations</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Freelance Web Developer</div>
+                        <div class="company">Remote</div>
+                    </div>
+                    <div class="location-date">
+                        2021 – Present
+                    </div>
+                </div>
+                <div class="job-description">
+                    <ul>
+                        <li>AI Receipt Extractor (Next.js): OCR-powered receipt parsing integrated into ESS workflows</li>
+                        <li>Cybersecurity Risk Assessment Portal (Next.js): Risk scoring and audit-ready reporting platform</li>
+                        <li>MSF EA Employee Self Service (Next.js + Shadcn): Enhanced UI/UX and HR automation workflows</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Student Developer</div>
+                        <div class="company">Freelancer</div>
+                    </div>
+                    <div class="location-date">
+                        May 2021 – Nov 2021
+                    </div>
+                </div>
+                <div class="job-description">
+                    <ul>
+                        <li>Developed Django REST APIs, Angular frontends, and integrated GitHub API projects</li>
+                        <li>Collaborated on MSF Workstation Management System for asset tracking</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Social Media Executive & IT Support</div>
+                        <div class="company">Captivate Africa Limited</div>
+                    </div>
+                    <div class="location-date">
+                        Nairobi, Kenya<br>
+                        Jun 2019 – May 2021
+                    </div>
+                </div>
+                <div class="job-description">
+                    <ul>
+                        <li>Managed daily social media channel operations and engagement</li>
+                        <li>Drafted reports and presentations for senior management on customer feedback and analytics</li>
+                        <li>Planned and maintained content calendars to ensure consistent and relevant posting</li>
+                        <li>Installed and configured computer hardware, software, systems, networks, printers, and scanners</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Marketing Consultant</div>
+                        <div class="company">BanDotQ Limited</div>
+                    </div>
+                    <div class="location-date">
+                        Nairobi, Kenya<br>
+                        Apr 2019 – Feb 2020
+                    </div>
+                </div>
+                <div class="job-description">
+                    <ul>
+                        <li>Assisted in designing behaviour-driven development of Ban.Q mobile application</li>
+                        <li>Managed social media content calendars and campaigns</li>
+                        <li>Mobilised over 500 Ban.Q app downloads through digital campaigns</li>
+                        <li>Conducted digital market research on competitors</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Digital Marketer</div>
+                        <div class="company">Habari Consulting</div>
+                    </div>
+                    <div class="location-date">
+                        Nairobi, Kenya<br>
+                        Mar 2018 – Jan 2019
+                    </div>
+                </div>
+                <div class="job-description">
+                    <ul>
+                        <li>Prepared analytical reports and presentations for senior management</li>
+                        <li>Tracked and reported online marketing performance and competitor activity</li>
+                        <li>Liaised with internal teams to convey customer insights</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Education & Certifications</div>
+            <div class="education-item">
+                <div>
+                    <div class="education-title">Software Development Certification</div>
+                    <div class="education-institution">Moringa School</div>
+                </div>
+            </div>
+            <div class="education-item">
+                <div>
+                    <div class="education-title">Cybersecurity Prep</div>
+                    <div class="education-institution">Moringa School</div>
+                </div>
+            </div>
+            <div class="education-item">
+                <div>
+                    <div class="education-title">Introduction to AI & Machine Learning</div>
+                    <div class="education-institution">Tech Mindset Africa</div>
+                </div>
+            </div>
+            <div class="education-item">
+                <div>
+                    <div class="education-title">Data Visualization, Responsive Web Design, JavaScript Algorithms</div>
+                    <div class="education-institution">FreeCodeCamp</div>
+                </div>
+            </div>
+            <div class="education-item">
+                <div>
+                    <div class="education-title">Social Media Certified</div>
+                    <div class="education-institution">HubSpot</div>
+                </div>
+            </div>
+            <div class="education-item">
+                <div>
+                    <div class="education-title">Google Ads Fundamentals</div>
+                    <div class="education-institution">Google</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">References</div>
+            <div class="references-grid">
+                <div class="reference-item">
+                    <div class="reference-name">Miss Winnie Jawour</div>
+                    <div class="reference-title">Functional Consultant & Head of Technical Operations</div>
+                    <div>Kobby Technologies Limited, Nairobi, Kenya</div>
+                    <div>📞 0702 365 011</div>
+                </div>
+                <div class="reference-item">
+                    <div class="reference-name">Mr Daniel Onsombi</div>
+                    <div class="reference-title">Head of Technical Operations</div>
+                    <div>Médecins Sans Frontières – Kenya</div>
+                    <div>📞 +254 704 930 169</div>
+                </div>
+                <div class="reference-item">
+                    <div class="reference-name">Mrs Nazreen Abdul</div>
+                    <div class="reference-title">General Manager</div>
+                    <div>Captivate Africa Ltd, Nairobi, Kenya</div>
+                    <div>📞 0727 812 661</div>
+                </div>
+                <div class="reference-item">
+                    <div class="reference-name">Mrs Zain Nasser</div>
+                    <div class="reference-title">Client Service Director</div>
+                    <div>Habari Consulting, Nairobi, Kenya</div>
+                    <div>📞 +254 702 365 011</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Auto-print functionality for PDF generation
+        function generatePDF() {
+            window.print();
+        }
+        
+        // Optional: Add keyboard shortcut for printing
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && e.key === 'p') {
+                e.preventDefault();
+                window.print();
+            }
+        });
+    </script>
+</body>
+</html>
