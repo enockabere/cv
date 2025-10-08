@@ -244,6 +244,44 @@
           margin-bottom: 15px;
         }
       }
+
+      .motivation-letter {
+    max-width: 850px; /* match CV width */
+    margin: 0 auto; /* center align like resume */
+    padding: 40px 60px; /* add top/bottom + side padding */
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 11pt;
+    line-height: 1.7;
+    color: #333;
+  }
+
+  .motivation-letter h1 {
+    text-align: center;
+    color: #1a3da1; /* match resume blue tone */
+    font-size: 18pt;
+    margin-bottom: 25px;
+  }
+
+  .motivation-letter p {
+    margin-bottom: 12px;
+  }
+
+  .motivation-letter strong {
+    color: #1a3da1;
+  }
+
+  .motivation-letter hr {
+    border: none;
+    border-top: 2px solid #1a3da1;
+    margin: 40px 0 10px;
+  }
+
+  /* Optional: add consistent page break for print */
+  @media print {
+    .motivation-letter {
+      page-break-after: always;
+    }
+  }
     </style>
   </head>
   <body>
